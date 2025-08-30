@@ -14,7 +14,7 @@ const app = express();
 // Middlewares
 app.use(cors());
 app.use(express.json()); // Allows us to accept JSON data in the request body
-
+app.use("/api/articles", require("./routes/articleRoutes"));
 // A test route
 app.get("/", (req, res) => {
   res.send("VIBE HACK 2025 Blogging Platform API is running!");
